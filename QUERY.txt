@@ -1,0 +1,79 @@
+			GADGETS MANAGEMENT SYSTEM
+
+create database GADGETS_MANAGEMENT_SYSTEM;
+use GADGETS_MANAGEMENT_SYSTEM;
+		
+ 
+
+create table Sign_In (
+	USER_NAME 		varchar(30) 		PRIMARY KEY
+	PASSWORD 		varchar(30)
+);
+
+	
+
+create table Sign_UP(
+	NAME 			varchar(30) 		PRIMARY KEY
+	USER_NAME 		varchar(30)
+	PASSWORD		varchar(30)
+	EMAIL_ID		varchar(30)
+);
+
+
+
+create table USER_STATUS(
+	ACTIVE			boolean	
+	AUTHENTICATED_USER	boolean
+	NON_AUTHENTICATED_USER	boolean
+);
+
+
+
+CREATE table GADGETS_STOCK_DETAILS(
+	PRODUCT_ID		varchar(30)
+	PRODUCT_NAME		varchar(30)
+	PRODUCT_QUANTITY	varchar(30)
+	PRODUCT_STOCK		varchar(30)
+);
+
+
+
+CREATE table ORDER_PLACED_DETAILS(
+	SHIPPED_DATE		DATE
+	DELIVERY_DATE		DATE
+	PRODUCT_NAME		varchar(30)
+	PRODUCT_QUANTITY	varchar(30)
+	PRODUCT_PRICE		float
+	PAYMENT_METHOD		varchar(30)
+);
+
+
+
+CREATE table USER_GADGETS(
+	USER_NAME		varchar(30)		PRIMARY KEY
+	GADGETS			varchar(30)
+);
+
+
+
+CREATE table ONLINE_PAYMENT(
+	CREDIT_CARD_NUMBER	long			PRIMARY KEY
+	NET_AMOUNT		float
+	PRODCUT_NAME		varchar(30)
+	PRODUCT_QUANTITY	varchar(30)
+);
+
+
+
+CREATE table OFFLINE_PAYMENT(
+	NET_AMOUNT		float
+	PRODCUT_NAME		varchar(30)
+	PRODUCT_QUANTITY	varchar(30)
+);
+
+
+
+
+
+
+	
